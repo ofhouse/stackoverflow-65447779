@@ -20,8 +20,7 @@ module.exports = {
 
       // Change context of ESLint Webpack Plugin
       const { match: eslintPlugin } = getPlugin(webpackConfig, pluginByName("ESLintWebpackPlugin"));
-      eslintPlugin.options['context'] = path.join(__dirname, "../../")
-
+      eslintPlugin.options['context'] = path.join(__dirname, "../..");
       return webpackConfig;
     }
   }
